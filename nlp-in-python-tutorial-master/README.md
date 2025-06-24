@@ -1,31 +1,86 @@
-## Welcome to the Natural Language Processing in Python Tutorial!
+# Stand-Up Comedy NLP Analysis 🎤
 
-We will be going through several Jupyter Notebooks during the tutorial and use a number of data science libraries along the way. The easiest way to get started is to download Anaconda, which is free and open source. When you download this, it comes with the Jupyter  Notebook IDE and many popular data science libraries, so you don’t have to install them one by one.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![NLP](https://img.shields.io/badge/NLP-TextBlob%2FNLTK%2BGensim-green)
+![Data Science](https://img.shields.io/badge/Analysis-Sentiment%2BTopic%20Modeling-orange)
 
-Here are the steps you’ll need to take before the start of the tutorial:
+A comprehensive NLP analysis of 12 top stand-up comedy specials, with special focus on Ali Wong's comedic style.
 
-### 1. Download Anaconda
-I highly recommend that you download [the Python 3.7 version](https://www.anaconda.com/download/).
+## 📌 Project Overview
 
-### 2. Download the Jupyter Notebooks
-Clone or download this [Github repository](https://github.com/adashofdata/nlp-in-python-tutorial), so you have access to all the Jupyter Notebooks (.ipynb extension) in the tutorial. **Note the green button on the right side of the screen that says `Clone or download`.** If you know how to use Github, go ahead and clone the repo. If you don't know how to use Github, you can also just download the zip file and unzip it on your laptop.
+This project explores:
+- Linguistic patterns across top comedians
+- Sentiment analysis of routines
+- Topic modeling to identify common themes
+- Text generation in Ali Wong's style
 
-### 3. Launch Anaconda and Open a Jupyter Notebook
+## 🎭 Featured Comedians
+| Comedian | Special | Year |
+|----------|---------|------|
+| Ali Wong | Baby Cobra | 2016 |
+| Dave Chappelle | The Age of Spin | 2017 |
+| John Mulaney | Comeback Kid | 2015 |
+| Louis C.K. | Oh My God | 2013 |
+| Bill Burr | I'm Sorry You Feel That Way | 2014 |
+| ...and 7 others | | |
 
-*Windows:*
-Open the Anaconda Navigator program. You should see the Jupyter Notebook logo. Below the logo, click Launch. A browser window should open up. In the browser window, navigate to the location of the saved Jupyter Notebook files and open 0-Hello-World.ipynb. Follow the instructions in the notebook.
+## 🛠️ Technologies Used
+```python
+# Core Libraries
+import pandas as pd
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer
+from textblob import TextBlob
+from gensim import models
+```
+## Analysis Techniques
+- Document-Term Matrix creation with custom stop words
+- Sentiment Analysis using TextBlob
+- LDA Topic Modeling (4 identified topics)
+- Markov Chain Text Generation
 
-*Mac/Linux:*
-Open a terminal. Type ```jupyter notebook```. A browser should open up. In the browser window, navigate to the location of the saved Jupyter Notebook files and open 0-Hello-World.ipynb. Follow the instructions in the notebook.
+## Visualizations
+- Word clouds for each comedian
+- Sentiment trend lines
+- Profanity scatter plots
+- Vocabulary comparison charts
 
-### 4. Install a Few Additional Packages
+  ## 📂 Project Structure
+  ├── notebooks/
+│   ├── 1_Data_Cleaning.ipynb       # Web scraping & text preprocessing
+│   ├── 2_EDA.ipynb                 # Exploratory analysis & word clouds
+│   ├── 3_Sentiment_Analysis.ipynb  # Polarity & subjectivity analysis
+│   ├── 4_Topic_Modeling.ipynb      # LDA topic modeling
+│   └── 5_Text_Generation.ipynb     # Markov chain text generation
+├── data/
+│   ├── transcripts/                # Raw transcript files
+│   ├── corpus.pkl                  # Processed text corpus  
+│   └── dtm.pkl                     # Document-term matrix
+└── utils/                          # Helper functions
 
-There are a few additional packages we'll be using during the tutorial that are not included when you download Anaconda - wordcloud, textblob and gensim.
+🔍 Key Findings
+- Word Frequency Analysis
+- https://i.imgur.com/wordcloud.png
 
-*Windows:*
-Open the Anaconda Prompt program. You should see a black window pop up. Type `conda install -c conda-forge wordcloud` to download wordcloud. You will be asked whether you want to proceed or not. Type `y` for yes. Once that is done, type `conda install -c conda-forge textblob` to download textblob and `y` to proceed, and type `conda install -c conda-forge gensim` to download gensim and `y` to proceed.
+## Sample sentiment calculation
+```
+pol = lambda x: TextBlob(x).sentiment.polarity
+data['polarity'] = data['transcript'].apply(pol)
+```
+## Topic Modeling Results
+- Identified 4 key topics:
+- Family (mom, parents)
+- Relationships (husband, wife)
+- Controversial issues (guns)
+- Observational humor
 
-*Mac/Linux:*
-Your terminal should already be open. Type command-t to open a new tab. Type `conda install -c conda-forge wordcloud` to download wordcloud. You will be asked whether you want to proceed or not. Type `y` for yes. Once that is done, type `conda install -c conda-forge textblob` to download textblob and `y` to proceed, and type `conda install -c conda-forge gensim` to download gensim and `y` to proceed.
-
-If you have any issues, please email me at adashofdata@gmail.com or come talk to me before the start of the tutorial.
+## Generated Comedy
+- Example Markov chain output:
+- "My husband does know what delivery means. Asian girls have to be pregnant again because white people love dogs."
+## 🚀 Installation
+- Clone repository:
+ ```
+  git clone (https://github.com/Abdallah1Atef/Brainwave_Matrix_Intern/edit/Task-2/nlp-in-python-tutorial-master).git
+  cd standup-analysis
+  ```
+  
