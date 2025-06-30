@@ -45,22 +45,19 @@ from gensim import models
 - Profanity scatter plots
 - Vocabulary comparison charts
 
-  ## 📂 Project Structure
-  ``` project/ ├── notebooks/ │ ├── 1_Data_Cleaning.ipynb # Web scraping & text preprocessing │ ├── 2_EDA.ipynb # Exploratory analysis & word clouds │ ├── 3_Sentiment_Analysis.ipynb # Polarity & subjectivity analysis │ ├── 4_Topic_Modeling.ipynb # LDA topic modeling │ └── 5_Text_Generation.ipynb # Markov chain text generation ├── data/ │ ├── transcripts/ # Raw transcript files │ ├── corpus.pkl # Processed text corpus │ └── dtm.pkl # Document-term matrix └── utils/ # Helper functions ``` 
-  ├── notebooks/
-│   ├── 1_Data_Cleaning.ipynb       # Web scraping & text preprocessing
-│   ├── 2_EDA.ipynb                 # Exploratory analysis & word clouds
-│   ├── 3_Sentiment_Analysis.ipynb  # Polarity & subjectivity analysis
-│   ├── 4_Topic_Modeling.ipynb      # LDA topic modeling
-│   └── 5_Text_Generation.ipynb     # Markov chain text generation
-├── data/
-│   ├── transcripts/                # Raw transcript files
-│   ├── corpus.pkl                  # Processed text corpus  
-│   └── dtm.pkl                     # Document-term matrix
-└── utils/                          # Helper functions
-🔍 Key Findings
-- Word Frequency Analysis
-- https://i.imgur.com/wordcloud.png
+ ## 📂 Project Structure
+- ├── notebooks/
+- │   ├── 1_Data_Cleaning.ipynb       # Web scraping & text preprocessing
+- │   ├── 2_EDA.ipynb                 # Exploratory analysis & word clouds
+- │   ├── 3_Sentiment_Analysis.ipynb  # Polarity & subjectivity analysis
+- │   ├── 4_Topic_Modeling.ipynb      # LDA topic modeling
+- │   └── 5_Text_Generation.ipynb     # Markov chain text generation
+- ├── data/
+- │   ├── transcripts/                # Raw transcript files
+- │   ├── corpus.pkl                  # Processed text corpus  
+- │   └── dtm.pkl                     # Document-term matrix
+- └── utils/                          # Helper functions
+
 
 ## Sample sentiment calculation
 ```
